@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'drawer-item.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,15 +8,20 @@ void main() {
 class MyApp extends StatelessWidget {
   build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primaryColor: Colors.purple,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Colors.purple,
+      ),
+      title: 'MyApp',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('MY APP'),
         ),
-        title: 'MyApp',
-        home: Scaffold(
-          drawer: Drawer(),
-          appBar: AppBar(title: Text('MyApp')),
-          body: Text(''),
-        ));
+        drawer: Drawer(
+          child: CreateDrawerItem(),
+        ),
+        body: Text('MY APP')
+      ),
+    );
   }
 }
