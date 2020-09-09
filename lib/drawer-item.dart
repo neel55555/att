@@ -9,9 +9,10 @@ class CreateDrawerItem extends StatelessWidget {
       children: [
         _createHeader(),
         _createDrawerItem(icon: Icons.ac_unit, text: 'MY APP'),
-        _createDrawerItem(icon: Icons.ac_unit, text: 'MY APP'),
-        _createDrawerItem(icon: Icons.ac_unit, text: 'MY APP'),
-        _createDrawerItem(icon: Icons.ac_unit, text: 'MY APP'),
+        _createDrawerItem(icon: Icons.access_alarm, text: 'MY APP'),
+        _createDrawerItem(icon: Icons.local_grocery_store, text: 'MY APP'),
+        Divider(),
+        _createDrawerItem(icon: Icons.system_update_tv, text: 'MY APP'),
       ],
     );
   }
@@ -33,8 +34,8 @@ Widget _createDrawerItem({IconData icon, String text}) {
 
 Widget _createHeader() {
   return DrawerHeader(
-    margin: EdgeInsets.zero,
-    padding: EdgeInsets.zero,
+    //margin: EdgeInsets.zero,
+    //padding: EdgeInsets.zero,
     decoration: BoxDecoration(
       image: DecorationImage(
         fit: BoxFit.fill,
