@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CreateDrawerItem extends StatelessWidget {
+class CreateDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

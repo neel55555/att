@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'drawer-item.dart';
+import 'drawer.dart';
+import 'screens/devices.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,14 +14,20 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.purple,
       ),
       title: 'MyApp',
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Root(),
+        '/devices': (context) => Devices(),
+      },
       home: Scaffold(
         appBar: AppBar(
           title: Text('MY APP'),
         ),
         drawer: Drawer(
-          child: CreateDrawerItem(),
+          child: CreateDrawer(),
         ),
-        body: Text('MY APP')
+        body: Text('MY APP'),
+        
       ),
     );
   }
