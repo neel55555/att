@@ -8,7 +8,7 @@ class CreateDrawer extends StatelessWidget {
     return ListView(
       children: [
         _createHeader(),
-        _createDrawerItem(icon: Icons.ac_unit, text: 'MY APP'),
+        _createDrawerItem(icon: Icons.ac_unit, text: 'MY APP', onTap: () => {Navigator.pushNamed(context, '/attendance')}),
         _createDrawerItem(icon: Icons.access_alarm, text: 'MY APP'),
         _createDrawerItem(icon: Icons.local_grocery_store, text: 'MY APP'),
         Divider(),
@@ -18,8 +18,9 @@ class CreateDrawer extends StatelessWidget {
   }
 }
 
-Widget _createDrawerItem({IconData icon, String text}) {
+Widget _createDrawerItem({IconData icon, String text, onTap}) {
   return ListTile(
+    onTap: onTap,
     title: Row(
       children: <Widget>[
         Icon(icon),
@@ -34,8 +35,8 @@ Widget _createDrawerItem({IconData icon, String text}) {
 
 Widget _createHeader() {
   return DrawerHeader(
-    //margin: EdgeInsets.zero,
-    //padding: EdgeInsets.zero,
+    margin: EdgeInsets.zero,
+    padding: EdgeInsets.zero,
     decoration: BoxDecoration(
       image: DecorationImage(
         fit: BoxFit.fill,
